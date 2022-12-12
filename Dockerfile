@@ -7,6 +7,7 @@ ADD snxrc.tmpl /root/snxrc.tmpl
 ADD root.db /etc/snx/
 ADD USER.db /etc/snx/
 
-ADD iptables.rules /etc/iptables.rules
+ADD init.sh /init.sh
 
-CMD ["/bin/sh", "-c", "envsubst < /root/snxrc.tmpl >/root/.snxrc && tail -f /dev/null"]
+
+CMD ["/bin/sh", "-c", "envsubst < /root/snxrc.tmpl >/root/.snxrc && /init.sh"]
