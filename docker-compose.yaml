@@ -1,0 +1,19 @@
+services:
+  minidlna:
+    image: dsnx
+    container_name: dsnx
+    environment:
+      - SERVER=
+      - USERNAME=
+      - PASSWORD=
+    volumes:
+      - /lib/modules:/lib/modules
+    mac_address: '02:42:35:42:92:81'
+    networks:
+      - qnet-dhcp
+    restart: always
+    
+networks:
+  qnet-dhcp:
+    external:
+      name: qnet-dhcp-bond0-6d6da6
