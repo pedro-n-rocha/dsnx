@@ -9,4 +9,4 @@ ADD USER.db /etc/snx/
 
 ADD iptables.rules /etc/iptables.rules
 
-CMD ["/bin/sh", "-c", "envsubst < /root/snxrc.tmpl >/root/.snxrc && bash"]
+CMD ["/bin/sh", "-c", "envsubst < /root/snxrc.tmpl >/root/.snxrc && tail -f /dev/null"]

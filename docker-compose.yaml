@@ -11,7 +11,6 @@ services:
     mac_address: '02:42:35:42:92:81'
     networks:
       - qnet-dhcp
-    restart: always
     cap_add:
       - ALL
     
