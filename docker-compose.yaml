@@ -12,6 +12,8 @@ services:
     networks:
       - qnet-dhcp
     restart: always
+    cap_add:
+      - ALL
     
 networks:
   qnet-dhcp:
