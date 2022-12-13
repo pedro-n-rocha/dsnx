@@ -13,6 +13,8 @@ services:
       - qnet-dhcp
     cap_add:
       - ALL
+    command: >
+      /bin/sh -c "envsubst < /root/snxrc.tmpl >/root/.snxrc & echo $PASSWORD |snx"
     
 networks:
   qnet-dhcp:

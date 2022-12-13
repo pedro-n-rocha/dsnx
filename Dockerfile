@@ -5,4 +5,3 @@ RUN apt install -y libstdc++5 libx11-6 kmod gettext-base iptables net-tools iput
 ADD snx /usr/sbin
 ADD snxrc.tmpl /root/snxrc.tmpl
 ADD root.db /etc/snx/
-ADD USER.db /etc/snx/
